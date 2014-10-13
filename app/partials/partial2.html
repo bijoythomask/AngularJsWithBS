@@ -2,4 +2,15 @@
 <p>
   Showing of 'interpolate' filter:
   {{ 'Current version is v%VERSION%.' | interpolate }}
+  
+  
 </p>
+<br>
+<div ng-controller="myApp.controllers">
+<table>
+    <tbody ng:repeat="i in items">
+        <tr><td>{{i.name}}</td><td>{{$index}}</td></tr>
+        <tr ng:repeat="e in i.examples"><td>{{e.name}}</td><td>{{$index}}</td></tr>
+    </tbody>
+</table>
+</div>
