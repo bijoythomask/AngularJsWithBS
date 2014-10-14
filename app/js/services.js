@@ -10,7 +10,9 @@ var customerServices = angular.module('myApp.services', ['ngResource'])
 
         .factory('Customer', ['$resource',
             function ($resource) {
-                return $resource('http://localhost:8080/CustomerDB/webresources/customer', {}, {
-                    query: {method: 'GET'}
+                return $resource('http://localhost:8080/CustomerDB/webresources/com.rest.customer.customer',{}, {
+                    get: {method: 'GET',
+                          params:{}
+                      }
                 });
             }]);

@@ -9,12 +9,8 @@
 <br>
 <div ng-controller="MyCtrl2">
     
-<table>
-    <tbody ng:repeat="customer in customers">
-        <tr><td>{{customer.name}}</td><td>{{$index}}</td></tr>
-        <tr ng:repeat="e in i.examples"><td>{{e.name}}</td><td>{{$index}}</td></tr>
-    </tbody>
-</table>
-Result Here : {{testFn()}}
+    <a ng-click="testFn()" href="#" >Refresh</a>
+    
+Result Here : {{customers|json}}
     
 </div>
