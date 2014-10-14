@@ -4,12 +4,18 @@
 
 angular.module('myApp.controllers', [])
 
-        .controller('MyCtrl1', ['$scope', function ($scope) {
-
+        .controller('MyCtrl1', ['$scope', function ($scope ) {
+                
             }])
-        .controller('MyCtrl2', ['$scope','Phone', function ($scope,Phone) {
-                $scope.phones = Phone.query();
-                $scope.orderProp = 'age';
+        .controller('MyCtrl2', ['$scope','Customer', function ($scope,Customer) {
+                
+                $scope.testFn= function(){
+                    console.log(Customer.query());
+                    return 'Test';
+                };
+                
             }]);
-
+        
+        
+       
      
