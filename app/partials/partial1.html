@@ -1,1 +1,24 @@
-<p>This is the partial for view 1.</p>
+        
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Phone</th>
+                <th>Customer ID</th>
+            </tr>
+        </thead>
+        <tbody ng:repeat="customer in customers">
+            <tr>
+                <td>{{$index}}</td>
+                <td>{{customer.name}}</td>
+                <td>{{customer.city}}</td>
+                <td>{{customer.phone}}</td>
+                <td>{{customer.customerId}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
