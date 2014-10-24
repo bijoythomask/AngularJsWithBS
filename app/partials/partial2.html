@@ -1,13 +1,22 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-  
-{{name}}
-  
-</p>
-<br>
-<div >
+<div  class="container">
+    <h3>Add new cutomer</h3>
+    <form role="form" ng-submit="save()">
+        <div class="form-group">
+            <label for="customerName">Name</label>
+            <input type="text"  ng-model="customer.name" class="form-control" id="customerName" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="customerCity">City</label>
+            <input type="text" ng-model="customer.city" class="form-control" id="customerCity" placeholder="City">
+        </div>
+        
+         <div class="form-group">
+            <label for="customerPhone">Phone</label>
+            <input type="number" ng-model="customer.phone"  class="form-control" id="customerPhone" placeholder="Phone">
+        </div>
+       
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
 
 
 </div>
