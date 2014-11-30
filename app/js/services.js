@@ -12,8 +12,20 @@ var customerServices = angular.module('myApp.services', ['ngResource'])
             function ($resource) {
                 return $resource('http://localhost:8080/CustomerDB/webresources/com.rest.customer.customer/:customerId/DiscountCode/:discountCode',
                     {customerId:'@customerId',discountCode:'@discountCode'}, 
-                    {get: { method:'GET', isArray:true },
-                    save:{ method:'POST'}
+                    {query:{ method:'GET', isArray:true },
+                    get: { method:'GET'},
+                    save:{ method:'POST'},
+                    update:{ method:'PUT'}
+                });
+            }])
+        .factory('Customer2', ['$resource',
+            function ($resource) {
+                return $resource('http://localhost:8080/CustomerDB/webresources/com.rest.customer.customer/:id',
+                    {id:'@customerId'}, 
+                    {query:{ method:'GET', isArray:true },
+                    get: { method:'GET'},
+                    save:{ method:'POST'},
+                    update:{ method:'PUT'}
                 });
             }])
         .factory('Discounts', ['$resource',
